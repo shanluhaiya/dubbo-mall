@@ -1,0 +1,59 @@
+server:
+  port: 8020
+
+# mysql
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    # MySQL配置
+    driverClassName: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/haiya_platform?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=Asia/Shanghai
+    username: learning
+    password: Lear@2021
+    #oracle配置
+    #    driverClassName: oracle.jdbc.OracleDriver
+    #    url: jdbc:oracle:thin:@127.0.0.1:1521:haiya_platform
+    #    username: learning
+    #    password: Lear@2021
+    #SQLServer配置
+    #    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    #    url: jdbc:sqlserver://127.0.0.1:1433;DatabaseName=haiya_platform
+    #    username: learning
+    #    password: Lear@2021
+    #PostgreSQL配置
+    #    driverClassName: org.postgresql.Driver
+    #    url: jdbc:postgresql://127.0.0.1:5432/haiya_platform
+    #    username: learning
+    #    password: Lear@2021
+
+
+
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  resources:
+    static-locations: classpath:/static/,classpath:/views/
+
+#mongodb:
+#  host: localhost
+#  port: 27017
+#  auth: false #是否使用密码验证
+#  username: learning
+#  password: Lear@2021
+#  source: 123456
+#  database: haiya_platform
+
+mybatis-plus:
+  mapperLocations: classpath:mapper/**/*.xml
+
+
+pagehelper:
+  reasonable: true
+  supportMethodsArguments: true
+  params: count=countSql
+
+
+# 指定数据库，可选值有【mysql、oracle、sqlserver、postgresql、mongodb】
+haiya:
+  database: mysql
+

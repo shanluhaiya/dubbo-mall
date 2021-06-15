@@ -1,0 +1,15 @@
+server:
+  port: 9001
+dubbo:
+  application:
+    name: order-service
+  registry:
+    protocol: zookeeper
+    address: 127.0.0.1:2181
+  scan:
+    base-packages: com.haiya
+  protocol:
+    name: dubbo
+    port: 20880
+  monitor:
+    protocol: registry
