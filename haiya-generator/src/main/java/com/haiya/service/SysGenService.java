@@ -11,7 +11,6 @@ import com.haiya.utils.PageUtils;
 import com.haiya.utils.Query;
 import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 import java.io.ByteArrayOutputStream;
@@ -26,7 +25,6 @@ import java.util.zip.ZipOutputStream;
 public class SysGenService {
     @Autowired
     private GenDao genDao;
-
 
     public PageUtils queryList(Query query) {
         Page<?> page = PageHelper.startPage(query.getPage(), query.getLimit());
