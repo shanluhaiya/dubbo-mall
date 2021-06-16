@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.haiya.service.DubboService;
+import com.haiya.service.DubboProtoService;
 
 /**
  * @author zlt
@@ -17,7 +17,7 @@ import com.haiya.service.DubboService;
 @RestController
 public class WebController {
     @Autowired
-    private DubboService dubboService;
+    private DubboProtoService dubboService;
 
     @GetMapping("/test/{p}")
     public String test(@PathVariable("p") String param) {

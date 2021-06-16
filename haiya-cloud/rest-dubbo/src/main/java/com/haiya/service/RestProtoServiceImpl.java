@@ -1,14 +1,14 @@
 package com.haiya.service;
 
-import org.apache.dubbo.config.annotation.Service;
+import org.apache.dubbo.config.annotation.DubboService;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 
-@Service(protocol = "rest")
+@DubboService(protocol = "rest")
 @Path("/")
-public class RestServiceImpl implements RestService {
+public class RestProtoServiceImpl implements RestProtoService {
     @Override
     @Path("test/{p}")
     @GET

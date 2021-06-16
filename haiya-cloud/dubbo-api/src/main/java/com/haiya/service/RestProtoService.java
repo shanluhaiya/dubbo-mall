@@ -1,5 +1,5 @@
 package com.haiya.service;
 
-public interface RestService {
+public interface RestProtoService {
     String test(String param);
 }

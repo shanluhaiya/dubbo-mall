@@ -1,5 +1,5 @@
 package com.haiya.service;
 
-public interface DubboService {
+public interface DubboProtoService {
     String test(String param);
 }
